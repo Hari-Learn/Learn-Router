@@ -1,14 +1,26 @@
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./routes/Home"
+import About from "./routes/About"
+import Service from "./routes/Service"
+import { Link } from "react-router-dom"
 function App() {
-  
-
+ 
   return (
-    <>
-      
-      <h1>Router + React</h1>
-      
-    </>
+   
+    
+
+    <div>
+      <Link to="/">Home - </Link>
+      <Link to="/about">About - </Link>
+      <Link to="/service">Service  </Link>
+
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/service" element={<Service/>} />
+      </Routes>
+    </div>
+  
   )
 }
 
